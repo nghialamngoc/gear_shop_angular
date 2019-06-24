@@ -1,0 +1,48 @@
+<div class="featured-product">
+    <div class="product-title d-flex align-items-center">
+      <p class="flex-grow-1">{{title}}</p>
+      <span>
+        <a href="">
+          Xem tất cả >>
+        </a>
+      </span>
+    </div>
+    <div class="products-view">
+      <div class="row">
+        <div class="col-6 col-lg-3 product-view" *ngFor="let item of data">
+          <div class="this-is-name-okay">
+            <div class="what-name-1 d-flex justify-content-around">
+              <div class="is-new" *ngIf="item.isNew">
+                <span class="btn btn-primary btn-sm">New</span>
+              </div>
+              <div class="is-discount" *ngIf="item.discount > 0">
+                <span class="btn btn-danger btn-sm">Khuyến mãi</span>
+              </div>
+            </div>
+            <div class="product-img">
+              <a href="#">
+                <img src={{item.img_link}}
+                  alt="">
+              </a>
+              <div class="product-img-hover d-flex align-items-center">
+                <a href="#" class="flex-grow-1">
+                  <i>Click để xem chi tiết</i>
+                </a>
+                <a href="#" class="what-name" (click)="shoppingCardService.addShoppingCard(item)">Đặt hàng</a>
+              </div>
+            </div>
+            <div class="product-name">
+              <span>
+                {{item.name}}
+              </span>
+            </div>
+            <div class="product-price">
+              <span>{{item.price | currency : 'VND'}}</span>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>

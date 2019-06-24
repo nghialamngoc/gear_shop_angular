@@ -1,0 +1,19 @@
+<div class="d-flex h-100">
+  <div class="sub-cat-banner flex-grow-1">
+    <div class="row">      
+      <div class="sub-cat-column col-3" *ngFor="let item of subCategoryColumnData">
+        <p class="sub-cat-title">{{item.title}}</p>
+        <p class="sub-cat-children" *ngFor="let children of item.sub_item; let index = index">          
+          <a [href]="'product/'+item.sub_item_href_params[index]">
+            {{ children }}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="sub-cat-img d-none d-xl-block">
+    <a href="#">
+      <img src="http://theme.hstatic.net/1000026716/1000440777/14/xxxbannerxxx1.png?v=4458" alt="">
+    </a>
+  </div>
+</div>

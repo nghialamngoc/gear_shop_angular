@@ -1,0 +1,39 @@
+.sub-cat-banner {
+  .sub-cat-column {
+    padding: 15px 15px 15px 40px;
+    line-height: 9px;
+    .sub-cat-title {
+      font-size: 15px;
+      line-height: 20px;
+      color: red;
+      font-weight: 400;
+    }
+    .sub-cat-children {
+      font-size: 13px;
+      font-weight: normal;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+.sub-cat-img {
+  height: 100%;
+  overflow: hidden;
+}
+.left-bottom-sub-item {
+  img {
+    width: 100%;
+  }
+}
+.right {
+  .sub-item-right {
+    img {
+      max-width: 296px;
+    }
+  }
+}

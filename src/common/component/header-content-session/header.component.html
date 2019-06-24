@@ -1,0 +1,67 @@
+<div class="container-fluid headerxxx">
+  <div class="row">
+    <div class="col-lg-11 offset-lg-1 col-xl-11 d-flex align-items-center">
+      <div class="header-top-left">
+        <a href="/">
+          <img src="http://theme.hstatic.net/1000026716/1000440777/14/logo.svg?v=4302" alt="">
+        </a>
+      </div>
+      <div class="header-top-right flex-grow-1 d-flex-column">
+        <div class="header-top-right-top d-flex">
+          <div class="header-search d-flex flex-grow-1 flex-md-grow-0">
+            <input type="text" placeholder="Nhập mã hoặc tên sản phẩm..." class="flex-grow-1">
+            <div class="search">
+              <i class="fab fa-searchengin"></i>
+            </div>
+          </div>
+
+          <div class="no-name header-register d-none d-lg-block">
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              <span>ĐĂNG KÍ</span>
+            </a>
+          </div>
+          <div class="no-name header-login d-none d-lg-block">
+            <a href="#">
+              <i class="fas fa-user-circle"></i>
+              <span>ĐĂNG NHẬP</span>
+            </a>
+          </div>
+          <div class="no-name header-sale d-none d-lg-block">
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              <span>KHUYẾN MÃI</span>
+            </a>
+          </div>
+          <div class="no-name header-shopping-card">
+            <a href="#">
+              <div class="shopping-card-items d-none d-lg-block">{{ shoppingCard ? shoppingCard.count : 0 }}</div>
+              <i class="fas fa-shopping-cart"></i>
+              <span>GIỎ HÀNG</span>
+            </a>
+            <div class="shopping-card-block" *ngIf="shoppingCard.count > 0">
+              <p class="p-2 text-center">Giỏ Hàng Của bạn</p>
+              <hr>
+              <div class="shopping-product-list">
+                <div class="d-flex p-2">
+                  <span class="flex-grow-1">Tên sản phầm</span>
+                  <span>số lượng</span>
+                </div>  
+                <div class="d-flex p-2" *ngFor="let item of shoppingCard.productList">
+                  <span class="flex-grow-1">{{item.productName}}</span>
+                  <span>{{item.quantity}}</span>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-top-right-bottom">
+          <span>SHOWROOM: 78-80 HOÀNG HOA THÁM, P.12, Q.TÂN BÌNH, TP.HCM</span>
+          <span> <i class="fas fa-phone"></i> 18006975</span>
+          <span> <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> VIDEOS</a></span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
